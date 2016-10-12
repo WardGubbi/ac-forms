@@ -7,6 +7,15 @@ import { AbstractControl, FormArray, FormBuilder, FormControl, FormGroup, Valida
   styleUrls: ['./reactive-forms.component.css']
 })
 export class ReactiveFormsComponent {
+  form = new FormGroup({
+    first: new FormControl(),
+    last: new FormControl(),
+    username: new FormControl(),
+    password: new FormControl(),
+    confirm: new FormControl(),
+    newsletter: new FormControl(),
+  });
+  
   constructor() {
 
   }
