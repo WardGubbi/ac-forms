@@ -23,5 +23,5 @@
 <md-card>
   <p>Form: {{form.value | json}}</p>
   <p>Form Status: {{form.status}}</p>
-  <p>Password Status: {{form.get('account.password').status}}</p>
+  <p>Account status: {{form.get('account').errors | json}}</p>
 </md-card>

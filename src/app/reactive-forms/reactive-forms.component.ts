@@ -1,6 +1,10 @@
 import {Component} from '@angular/core';
 import {AbstractControl, FormArray, FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 
+function passwordMatcher(c: AbstractControl) {
+  return c.get('password').value === c.get('confirm').value ? null : {'nomatch': true};
+}
+
 @Component({
   selector: 'reactive-forms-comp',
   templateUrl: './reactive-forms.component.html',
@@ -17,7 +21,7 @@ export class ReactiveFormsComponent {
         username: '',
         password: ['', Validators.required],
         confirm: ['', Validators.required]
-      }),
+      }, {validator: passwordMatcher}),
       newsletter: ''
     });
     this.form.patchValue({
