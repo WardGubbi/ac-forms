@@ -18,6 +18,10 @@ export class ReactiveFormsComponent {
       confirm: '',
       newsletter: ''
     })
+    this.form.patchValue({
+      first: 'Nancy',
+      last: 'Drew'
+    })
   }
 
 }
