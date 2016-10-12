@@ -6,7 +6,7 @@
   <form novalidate #f="ngForm">
     <input [ngModel]="name.first" name="first" placeholder="First name">
     <input [ngModel]="name.last" name="last" placeholder="Last name">
-    <div ngModelGroup="account">
+    <div ngModelGroup="account" password-matcher #account="ngModelGroup">
       <label>Account</label>
       <input ngModel name="username" placeholder="Username">
       <input ngModel name="password" placeholder="Password" required #password="ngModel">
@@ -23,5 +23,5 @@
 <md-card>
   <p>{{f.value | json}}</p>
   <p>Form Status: {{f.control.status}}</p>
-  <p>Password Status: {{password.control.status}}</p>
+  <p>Account errors: {{account.control?.errors | json}}</p>
 </md-card>
