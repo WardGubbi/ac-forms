@@ -3,23 +3,23 @@
   <md-card-title>
     Registration form
   </md-card-title>
-  <form novalidate>
-    <input name="first" placeholder="First name">
-    <input name="last" placeholder="Last name">
+  <form novalidate #f="ngForm">
+    <input ngModel name="first" placeholder="First name">
+    <input ngModel name="last" placeholder="Last name">
     <div>
       <label>Account</label>
-      <input name="username" placeholder="Username">
-      <input name="password" placeholder="Password">
-      <input name="confirm" placeholder="Confirm password">
+      <input ngModel name="username" placeholder="Username">
+      <input ngModel name="password" placeholder="Password">
+      <input ngModel name="confirm" placeholder="Confirm password">
     </div>
     <label>Would you like to receive a newsletter?</label>
-    <input type="radio" value="yes" name="newsletter"> Yes
-    <input type="radio" value="no" name="newsletter"> No
+    <input type="radio" value="yes" ngModel name="newsletter"> Yes
+    <input type="radio" value="no" ngModel name="newsletter"> No
     <md-card-actions align="end">
       <button md-button>SUBMIT</button>
     </md-card-actions>
   </form>
 </md-card>
 <md-card>
-  <p></p>
+  <p>{{f.value | json}}</p>
 </md-card>
