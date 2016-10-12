@@ -15,8 +15,8 @@ export class ReactiveFormsComponent {
       last: '',
       account: this.fb.group({
         username: '',
-        password: '',
-        confirm: ''
+        password: ['', Validators.required],
+        confirm: ['', Validators.required]
       }),
       newsletter: ''
     });
