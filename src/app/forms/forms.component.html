@@ -13,8 +13,7 @@
       <input ngModel name="confirm" placeholder="Confirm password" required>
     </div>
     <label>Would you like to receive a newsletter?</label>
-    <input type="radio" value="yes" ngModel name="newsletter"> Yes
-    <input type="radio" value="no" ngModel name="newsletter"> No
+    <switch-control ngModel name="newsletter"></switch-control>
     <md-card-actions align="end">
       <button md-button>SUBMIT</button>
     </md-card-actions>

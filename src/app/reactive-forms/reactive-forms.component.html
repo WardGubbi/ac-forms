@@ -13,8 +13,7 @@
       <input formControlName="confirm" placeholder="Confirm password">
     </div>
     <label>Would you like to receive a newsletter?</label>
-    <input type="radio" value="yes" formControlName="newsletter"> Yes
-    <input type="radio" value="no" formControlName="newsletter"> No
+    <switch-control formControlName="newsletter"></switch-control>
     <md-card-actions align="end">
       <button md-button>SUBMIT</button>
     </md-card-actions>
