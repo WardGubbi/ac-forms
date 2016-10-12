@@ -4,8 +4,8 @@
     Registration form
   </md-card-title>
   <form novalidate #f="ngForm">
-    <input ngModel name="first" placeholder="First name">
-    <input ngModel name="last" placeholder="Last name">
+    <input [ngModel]="name.first" name="first" placeholder="First name">
+    <input [ngModel]="name.last" name="last" placeholder="Last name">
     <div>
       <label>Account</label>
       <input ngModel name="username" placeholder="Username">

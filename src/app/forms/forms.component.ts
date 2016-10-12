@@ -1,5 +1,5 @@
-import { Component, Directive } from '@angular/core';
-import { AbstractControl, NG_VALIDATORS } from '@angular/forms';
+import {Component, Directive} from '@angular/core';
+import {AbstractControl, NG_VALIDATORS} from '@angular/forms';
 
 @Component({
   selector: 'forms-comp',
@@ -7,5 +7,8 @@ import { AbstractControl, NG_VALIDATORS } from '@angular/forms';
   styleUrls: ['./forms.component.css']
 })
 export class FormsComponent {
-  
+  name: any = {
+    first: 'Nancy',
+    last: 'Drew'
+  }
 }
