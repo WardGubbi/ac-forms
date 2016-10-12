@@ -6,7 +6,7 @@
   <form novalidate #f="ngForm">
     <input [ngModel]="name.first" name="first" placeholder="First name">
     <input [ngModel]="name.last" name="last" placeholder="Last name">
-    <div>
+    <div ngModelGroup="account">
       <label>Account</label>
       <input ngModel name="username" placeholder="Username">
       <input ngModel name="password" placeholder="Password">
