@@ -6,7 +6,7 @@
   <form novalidate [formGroup]="form">
     <input formControlName="first" placeholder="First name">
     <input formControlName="last" placeholder="Last name">
-    <div>
+    <div formGroupName="account">
       <label>Account</label>
       <input formControlName="username" placeholder="Username">
       <input formControlName="password" placeholder="Password">

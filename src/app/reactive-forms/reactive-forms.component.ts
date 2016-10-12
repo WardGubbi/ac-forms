@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { AbstractControl, FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import {Component} from '@angular/core';
+import {AbstractControl, FormArray, FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'reactive-forms-comp',
@@ -7,17 +7,19 @@ import { AbstractControl, FormArray, FormBuilder, FormControl, FormGroup, Valida
   styleUrls: ['./reactive-forms.component.css']
 })
 export class ReactiveFormsComponent {
-  form : FormGroup;
+  form: FormGroup;
 
-  constructor(public fb:FormBuilder) {
+  constructor(public fb: FormBuilder) {
     this.form = this.fb.group({
       first: '',
       last: '',
-      username: '',
-      password: '',
-      confirm: '',
+      account: this.fb.group({
+        username: '',
+        password: '',
+        confirm: ''
+      }),
       newsletter: ''
-    })
+    });
     this.form.patchValue({
       first: 'Nancy',
       last: 'Drew'
